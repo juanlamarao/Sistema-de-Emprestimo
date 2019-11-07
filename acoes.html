@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Ações</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div id="nav">
+            <ul>
+                <!--<li><a href="/index.html">Home</a></li>-->
+                <li><a href="/clientes.html">Clientes</a></li>
+                <li><a href="/simulacao.html">Simulação</a></li>
+                <li><a href="/emprestimo.html">Emprestimo</a></li>
+                <li><a href="/consulta.html">Consulta</a></li>
+                <li class="selected"><a href="/acoes.html">Ações</a></li>
+                <li><a href="/receber.html">A Receber</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="white-part">
+                <h3>Pesquisa</h3>
+                <select id="escolha_cliente">
+                    <option disabled selected value> -- selecione um cliente -- </option>
+                    <option>Fulano 1</option>
+                    <option>Fulano 2</option>
+                    <option>Fulano 3</option>
+                    <option>Fulano 4</option>
+                    <option>Informações de acordo com o banco de dados</option>
+                    <option>Ao clicar em carregar dados os campos abaixo vao ser preenchidos</option>
+                </select>
+                <div class="dupla-escolha">
+                    <button onclick="emprestimo()" class="blue-btn">Carregar Empréstimo</button>
+                    <button onclick="limparformulario()" class="red-btn">Limpar Consulta</button>
+                </div>
+            </div>
+            <div class="blue-part">
+                <form id="simulacao_form"class="blue-part-inner-2clm">
+                    <div>
+                        <h3>Mês 1: </h3>
+                        <input type="text" id="input-mes1" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes1">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Mês 2: </h3>
+                        <input type="text" id="input-mes2" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes2">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Mês 3: </h3>
+                        <input type="text" id="input-mes3" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes3">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Mês 4: </h3>
+                        <input type="text" id="input-mes4" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes4">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Mês 5: </h3>
+                        <input type="text" id="input-mes5" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes5">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Mês 6: </h3>
+                        <input type="text" id="input-mes6" readonly>
+                    </div>
+                    <div>
+                        <h3>Status</h3>
+                        <select id="status_mes6">
+                            <option disabled selected value></option>
+                            <option value="pg">PAGO</option>
+                            <option value="npg">NÃO PAGO</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="dupla-escolha">
+                    <button onclick="emprestimo()" class="blue-btn">Quitar Empréstimo</button>
+                    <button onclick="limparformulario()" class="red-btn">Repactuar Empréstimo</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <!---->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="index.js"></script>
+</body>
+</html>

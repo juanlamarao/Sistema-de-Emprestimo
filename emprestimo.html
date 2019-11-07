@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Empréstimo</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div id="nav">
+            <ul>
+                <!--<li><a href="/index.html">Home</a></li>-->
+                <li><a href="/clientes.html">Clientes</a></li>
+                <li><a href="/simulacao.html">Simulação</a></li>
+                <li class="selected"><a href="/emprestimo.html">Emprestimo</a></li>
+                <li><a href="/consulta.html">Consulta</a></li>
+                <li><a href="/acoes.html">Ações</a></li>
+                <li><a href="/receber.html">A Receber</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <form class="white-part">
+                <h3>Pesquisa</h3>
+                <select id="escolha_cliente">
+                    <option disabled selected value> -- selecione um cliente -- </option>
+                    <option>Fulano 1</option>
+                    <option>Fulano 2</option>
+                    <option>Fulano 3</option>
+                    <option>Fulano 4</option>
+                    <option>Informações de acordo com o banco de dados</option>
+                    <option>Ao clicar em carregar dados os campos abaixo vao ser preenchidos</option>
+                </select>
+                <!-- remover o reload da pagina após clicar no botão-->
+                <button class="blue-btn">Carregar Dados</button>
+                <div>
+                    <h3>CPF</h3>
+                    <input type="text" class="input-cpf" readonly>
+                </div>
+            </form>
+            <div class="blue-part">
+                <form class="blue-part-inner">
+                    <div>
+                        <h3>Valor para Empréstimo</h3>
+                        <input type="number" class="input-valor" placeholder="Digite aqui.." required>
+                    </div>
+                    <div>
+                        <h3>Salário</h3>
+                        <input type="number" class="input-salario" placeholder="Digite aqui.." required>
+                    </div>
+                    <div>
+                        <h3>Juros</h3>
+                        <select id="escolha_juros">
+                            <option disabled selected value></option>
+                            <option value="0.2">20%</option>
+                            <option value="0.25">25%</option>
+                            <option value="0.3">30%</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Vencimento da Primeira Parcela</h3>
+                        <input type="text" onfocus="(this.type='date')" class="input-venc" placeholder="Digite aqui.." required>
+                    </div>
+                    <div class="dupla-escolha">
+                        <button onclick="emprestimo()" class="blue-btn">Realizar Empréstimo</button>
+                        <button onclick="limparformulario()" class="red-btn">Limpar Formulário</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <!---->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="index.js"></script>
+</body>
+</html>

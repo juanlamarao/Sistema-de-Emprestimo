@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Simulação</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div id="nav">
+            <ul>
+                <!--<li><a href="/index.html">Home</a></li>-->
+                <li><a href="/clientes.html">Clientes</a></li>
+                <li class="selected"><a href="/simulacao.html">Simulação</a></li>
+                <li><a href="/emprestimo.html">Emprestimo</a></li>
+                <li><a href="/consulta.html">Consulta</a></li>
+                <li><a href="/acoes.html">Ações</a></li>
+                <li><a href="/receber.html">A Receber</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <form class="white-part">
+                <div>
+                    <h3>Valor para Empréstimo</h3>
+                    <input type="number" class="input-valor" placeholder="Digite aqui.." required>
+                </div>
+                <div>
+                    <h3>Salário</h3>
+                    <input type="number" class="input-salario" placeholder="Digite aqui.." required>
+                </div>
+                <div>
+                    <h3>Juros</h3>
+                    <select id="escolha_juros">
+                        <option disabled selected value></option>
+                        <option value="0.2">20%</option>
+                        <option value="0.25">25%</option>
+                        <option value="0.3">30%</option>
+                    </select>
+                </div>
+                <div class="dupla-escolha">
+                    <button onclick="simular()" class="blue-btn">Simular</button>
+                    <button onclick="limparformulario()" class="red-btn">Limpar Simulação</button>
+                </div>
+            </form>
+            <div class="blue-part">
+                <div>
+                    <h2 class="blue-text">Resultado</h2>
+                </div>
+                <form id="simulacao_form"class="blue-part-inner-2clm">
+                    <div>
+                        <h3>Mês 1</h3>
+                        <input type="text" id="input-mes1" readonly>
+                    </div>
+                    <div>
+                        <h3>Mês 2</h3>
+                        <input type="text" id="input-mes2" readonly>
+                    </div>
+                    <div>
+                        <h3>Mês 3</h3>
+                        <input type="text" id="input-mes3" readonly>
+                    </div>
+                    <div>
+                        <h3>Mês 4</h3>
+                        <input type="text" id="input-mes4" readonly>
+                    </div>
+                    <div>
+                        <h3>Mês 5</h3>
+                        <input type="text" id="input-mes5" readonly>
+                    </div>
+                    <div>
+                        <h3>Mês 6</h3>
+                        <input type="text" id="input-mes6" readonly>
+                    </div>
+                </form>
+            </div>
+        <div class="footer">
+            <!---->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="index.js"></script>
+</body>
+</html>

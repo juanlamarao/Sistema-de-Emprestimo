@@ -1,0 +1,237 @@
+body {
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+/*div #app {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 40px;
+}
+
+div #nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background: #364b5e;
+}
+
+#nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}*/
+
+div #app {
+    display: grid;
+    grid-template: 1fr;
+    width: 100%;
+}
+
+div #nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background: #364b5e;
+}
+
+#nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+#nav ul li {
+    text-align: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-variant-caps: all-small-caps;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    height: 40px;
+    font-variant-caps: all-small-caps;
+}
+
+#nav ul li.selected {
+    background: #fc9498;
+}
+
+#nav ul li:hover {
+    background: #fc9498;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#main {
+    grid-area: 2 / 1 / 3 / 2;
+    background: yellow;
+}
+
+#footer {
+    grid-area: 3 / 1 / 4 / 2;
+    height: 20px;
+    background: blue;
+}
+.white-part {
+    width: 60%;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+div .blue-part {
+    background: #cdedf5;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+div .blue-part-2row {
+    background: #cdedf5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    justify-items: center;
+}
+
+div .blue-part-inner {
+    width: 60%;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+div .blue-part-inner-2clm {
+    width: 60%;
+    margin: 0px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.blue-part-inner-2clm input {
+    margin-bottom: 0px;
+    width: 150px;
+}
+
+select {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    padding: 10px;
+    outline: none;
+    width: 99%;
+    margin-bottom: 20px;
+    text-align-last: right;
+}
+
+input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    padding: 10px;
+    outline: none;
+    width: 94%;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+input:focus {
+    border-color: rgb(221, 126, 109);
+}
+
+input::-webkit-input-placeholder {
+    text-align: left;
+}
+input:-moz-placeholder {
+    text-align: left;  
+}
+input::-moz-placeholder {
+    text-align: left;  
+}
+input:-ms-input-placeholder {  
+    text-align: left; 
+}
+
+.blue-btn{
+    color: #fff;
+    background: #00b0b7;
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+.red-btn{
+    color: #fff;
+    background: #fc9498;
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    color: #364b5e;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #00b0b7;
+    margin-bottom: 5px;
+}
+
+.dupla-escolha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.dupla-escolha .blue-btn {
+    max-width: 150px;
+}
+
+.dupla-escolha .red-btn {
+    max-width: 150px;
+}
+
+button:hover {
+    margin-left: 2px;
+    background: #364b5e;
+}
